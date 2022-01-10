@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<req:RegisterSvcReq xmlns:req="http://www.o2.org/RegisterSvc/schema/Req" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.o2.org/RegisterSvc/schema/Req RegisterSvc_Req.xsd ">
+  <req:ClientDetails>
+    <req:clientId>req:clientId</req:clientId>
+    <req:channelId>req:channelId</req:channelId>
+    <req:regId>req:regId</req:regId>
+  </req:ClientDetails>
+  <req:CardDetails>
+    <req:cardNum>req:cardNum</req:cardNum>
+    <req:cvv>req:cvv</req:cvv>
+    <req:expDate>req:expDate</req:expDate>
+    <req:nameOnCard>req:nameOnCard</req:nameOnCard>
+  </req:CardDetails>
+  <req:AccountDetails>
+    <req:accountNum>req:accountNum</req:accountNum>
+    <req:mobile>req:mobile</req:mobile>
+  </req:AccountDetails>
+  <req:ServiceDetails>
+    <req:serviceName>req:serviceName</req:serviceName>
+    <req:apiName>req:apiName</req:apiName>
+    <req:version>req:version</req:version>
+  </req:ServiceDetails>
+</req:RegisterSvcReq>

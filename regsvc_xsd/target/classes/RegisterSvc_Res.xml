@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<res:RegisterSvcRes xmlns:res="http://www.o2.org/RegisterSvc/schema/Res" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.o2.org/RegisterSvc/schema/Res RegisterSvc_Res.xsd ">
+  <res:statusBlock>
+    <res:respCode>res:respCode</res:respCode>
+    <res:respMsg>res:respMsg</res:respMsg>
+  </res:statusBlock>
+  <res:creditCheck>
+    <res:rateOfPer>res:rateOfPer</res:rateOfPer>
+    <res:creditStatus>res:creditStatus</res:creditStatus>
+  </res:creditCheck>
+</res:RegisterSvcRes>
