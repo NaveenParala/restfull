@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.o2.org/RegisterService/Service" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 targetNamespace="http://www.o2.org/RegisterService/Service"
+	xmlns:req="http://www.o2.org/RegisterSvc/schema/Req" 
+	xmlns:res="http://www.o2.org/RegisterSvc/schema/Res">
+
+
+	<wsdl:types>
+	
+		<xsd:schema>
+			<xsd:import namespace="http://www.o2.org/RegisterSvc/schema/Req"
+				schemaLocation="RegisterSvc_Req.xsd" />
+			<xsd:import namespace="http://www.o2.org/RegisterSvc/schema/Res"
+				schemaLocation="RegisterSvc_Res.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="EnrollmentRequest">
+		<wsdl:part element="req:RegisterSvcReq" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="EnrollmentResponse">
+		<wsdl:part element="res:RegisterSvcRes" name="parameters" />
+	</wsdl:message>
+	<wsdl:portType name="RegisterService">
+		<wsdl:operation name="Enrollment">
+			<wsdl:input message="tns:EnrollmentRequest" />
+			<wsdl:output message="tns:EnrollmentResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="RegisterServiceBinding" type="tns:RegisterService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Enrollment">
+			<soap:operation soapAction=" " />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="EnrollmentService">
+		<wsdl:port binding="tns:RegisterServiceBinding" name="RegisterServicePort">
+			<soap:address location="http://www.example.org/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
